@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крестики нолики онлайн</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden; /* Отключаем прокрутку */
+            background-color: black;
+            display: flex;
+            justify-content: center; /* Центрируем по горизонтали */
+            align-items: center; /* Центрируем по вертикали */
+            height: 100vh; /* Высота на весь экран */
+        }
+        button {
+            font-size: 30px; /* Размер шрифта кнопки */
+            padding: 20px 40px; /* Отступы внутри кнопки */
+            background-color: red; /* Цвет фона кнопки */
+            color: white; /* Цвет текста */
+            border: none; /* Убираем рамку */
+            border-radius: 10px; /* Закругленные углы */
+            cursor: pointer; /* Курсор-указатель */
+            transition: background-color 0.3s; /* Плавный переход цвета фона */
+            position: absolute; /* Позиционирование для центра */
+        }
+        button:hover {
+            background-color: darkred; /* Цвет фона при наведении */
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Масштабируем изображение */
+            display: none; /* Скрываем GIF изначально */
+        }
+    </style>
+</head>
+<body>
+
+<button id="scareButton">Запустить (статус Ярик в сети)!</button>
+<img id="scareGif" src="7cd8c58fcb93e911079bfccdeff006d4_w200.webp" alt="Скример"> <!-- Указываем путь к GIF -->
+<audio id="scareSound" src="fsdsdfhh.wav" loop></audio> <!-- Включаем зацикливание звука -->
+
+<script>
+    document.getElementById('scareButton').onclick = function() {
+        this.style.display = 'none'; // Скрыть кнопку
+        document.getElementById('scareGif').style.display = 'block'; // Показать GIF
+        document.getElementById('scareSound').play(); // Воспроизвести звук
+    };
+</script>
+</body>
+</html>
